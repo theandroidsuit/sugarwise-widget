@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.theandroidsuit.sugarwise"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+	<application
+		android:allowBackup="true"
+		android:icon="@drawable/sw_launcher1"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme" >
+		
+		<receiver android:name="com.theandroidsuit.sugarwise.SugarWiseWidgetProvider" >
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+				<action android:name="com.theandroidsuit.intent.action.UPDATE_WIDGET" />
+			</intent-filter>
+		
+			<meta-data
+				android:name="android.appwidget.provider"
+				android:resource="@xml/widget_provider" />
+		</receiver>
+
+
+		<activity android:name="com.theandroidsuit.sugarwise.SugarWiseConfigure">
+		    <intent-filter>
+		        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+		    </intent-filter>
+		</activity>
+	</application>
+</manifest>
