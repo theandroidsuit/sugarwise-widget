@@ -13,6 +13,14 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Spinner;
 
+/**
+ *
+ * THE ANDROID SUIT 2014
+ * @author Virginia Hernandez
+ * @version 1.0
+ *
+ */
+
 public class SugarWiseConfigure extends Activity implements OnItemSelectedListener{
 	
     static final String TAG = "SugarWiseConfigure";

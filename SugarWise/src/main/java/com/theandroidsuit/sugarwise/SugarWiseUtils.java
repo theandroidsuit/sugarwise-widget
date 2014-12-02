@@ -8,6 +8,13 @@ import android.content.Context;
 import com.theandroidsuit.sugarwise.bean.Wisdom;
 import com.theandroidsuit.sugarwise.util.SugarWiseJSONParser;
 
+/**
+ *
+ * THE ANDROID SUIT 2014
+ * @author Virginia Hernandez
+ * @version 1.0
+ *
+ */
 
 public class SugarWiseUtils {
     private static final String TAG = "SugarWiseUtils";

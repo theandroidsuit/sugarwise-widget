@@ -11,6 +11,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
 
+/**
+ *
+ * THE ANDROID SUIT 2014
+ * @author Virginia Hernandez
+ * @version 1.0
+ *
+ */
+
 public class SugarWiseWidgetProvider extends AppWidgetProvider{
 	
     private static final String TAG = "SugarWiseWidgetProvider";
@@ -71,8 +79,8 @@ public class SugarWiseWidgetProvider extends AppWidgetProvider{
 		Wisdom wisdom = SugarWiseUtils.getCurrentWisdomCrystal();
 		
 	    sharingIntent.setType("text/plain");
-	    sharingIntent.putExtra(Intent.EXTRA_SUBJECT, wisdom.getWisdomTitle());
-	    sharingIntent.putExtra(Intent.EXTRA_TEXT, wisdom.getWisdomSentence() + " " + wisdom.getWisdomAuthor());
+	    sharingIntent.putExtra(Intent.EXTRA_SUBJECT, wisdom.getWisdomTitleToShare());
+	    sharingIntent.putExtra(Intent.EXTRA_TEXT, wisdom.getWisdomSentence() + " -- " + wisdom.getWisdomAuthor());
 	    
 	    
 	    PendingIntent sharePending = PendingIntent.getActivity(context, 

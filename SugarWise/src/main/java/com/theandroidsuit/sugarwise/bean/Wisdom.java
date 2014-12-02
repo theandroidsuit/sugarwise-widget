@@ -1,6 +1,12 @@
 package com.theandroidsuit.sugarwise.bean;
 
-import com.theandroidsuit.sugarwise.R;
+/**
+ *
+ * THE ANDROID SUIT 2014
+ * @author Virginia Hernandez
+ * @version 1.0
+ *
+ */
 
 public class Wisdom {
 
@@ -75,7 +81,10 @@ public class Wisdom {
 	public String getWisdomTitle() {
 		return "Sugar Wise - " + this.getType();
 	}
-	
+
+    public String getWisdomTitleToShare() {
+        return "#SugarWise";
+    }
 	
 	public String getWisdomAuthor (){
 		

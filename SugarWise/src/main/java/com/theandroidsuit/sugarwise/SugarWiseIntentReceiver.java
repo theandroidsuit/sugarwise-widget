@@ -9,6 +9,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.RemoteViews;
 
+/**
+ *
+ * THE ANDROID SUIT 2014
+ * @author Virginia Hernandez
+ * @version 1.0
+ *
+ */
+
 public class SugarWiseIntentReceiver extends BroadcastReceiver{
 	
     private static final String TAG = "SugarWiseIntentReceiver";
