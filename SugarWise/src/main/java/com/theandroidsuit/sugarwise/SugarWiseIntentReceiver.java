@@ -23,7 +23,6 @@ public class SugarWiseIntentReceiver extends BroadcastReceiver{
 
 
 	public static String theme = "";
-	public static String language = "en";
 	public static int color = 0;
 	public static int widgetID;
 		
@@ -56,11 +55,11 @@ public class SugarWiseIntentReceiver extends BroadcastReceiver{
 		
 		// updating view
 		
-		SugarWiseUtils utils = new SugarWiseUtils(context, language, theme, color);
+		SugarWiseUtils utils = new SugarWiseUtils(context, theme, color);
 
 		
 		SugarWiseWidgetProvider.getConfiguration(context, widgetID);
-		SugarWiseWidgetProvider.setNewWisdomSugar(context, widgetID, language, theme, color, remoteViews);		
+		SugarWiseWidgetProvider.setNewWisdomSugar(context, widgetID, theme, color, remoteViews);
 		
 		Intent intent = new Intent();
 		intent.setAction(SugarWiseUtils.WIDGET_UPDATE_ACTION);

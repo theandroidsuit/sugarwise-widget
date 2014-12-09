@@ -34,28 +34,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="3dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/languageTxt"
-                android:textStyle="bold"
-                android:layout_alignParentLeft="true" />
-
-            <Spinner
-                android:id="@+id/languageSpinner"
-                android:entries="@array/languages"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textStyle="italic"
-                android:layout_alignParentRight="true" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="3dp">
     	    
             <TextView
                 android:layout_width="wrap_content"
@@ -101,7 +79,7 @@
 
     <Button
         android:id="@+id/buttonConfigure"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/configButton" />
 

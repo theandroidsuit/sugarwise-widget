@@ -24,7 +24,6 @@ public class SugarWiseWidgetProvider extends AppWidgetProvider{
     private static final String TAG = "SugarWiseWidgetProvider";
     
 	public static String theme = "";
-	public static String language = "en";
 	public static int color = 0;
 
 	@Override
@@ -68,7 +67,7 @@ public class SugarWiseWidgetProvider extends AppWidgetProvider{
 		RemoteViews remoteViews = new RemoteViews(context.getPackageName(),R.layout.widget_sugarwise);
 			
 		getConfiguration(context, appWidgetId);
-		setNewWisdomSugar(context, appWidgetId, language, theme, color, remoteViews);		
+		setNewWisdomSugar(context, appWidgetId, theme, color, remoteViews);
 		
 		remoteViews.setOnClickPendingIntent(R.id.contentContainer, pending);
 		
@@ -100,18 +99,16 @@ public class SugarWiseWidgetProvider extends AppWidgetProvider{
 		Log.d(TAG, "getConfiguration");
 		
 		theme = SugarWiseConfigure.loadTitlePref(context, widgetID, "theme");
-		language = SugarWiseConfigure.loadTitlePref(context, widgetID, "language");
 		color = SugarWiseConfigure.loadTitlePrefInt(context, widgetID, "color");
 		
         Log.d(TAG + "theme", theme);
         Log.d(TAG + "color", String.valueOf(color));
-        Log.d(TAG + "language", language);
 	}
 	
-	public static void setNewWisdomSugar(Context context, int widgetID, String language, String theme, int color, RemoteViews remoteViews) {
+	public static void setNewWisdomSugar(Context context, int widgetID, String theme, int color, RemoteViews remoteViews) {
 		Log.d(TAG, "setNewWisdomSugar");
 		
-		SugarWiseUtils utils = new SugarWiseUtils(context, language, theme, color);
+		SugarWiseUtils utils = new SugarWiseUtils(context, theme, color);
 		
 		Wisdom wisdom = utils.getCurrentWisdomCrystal();
 		

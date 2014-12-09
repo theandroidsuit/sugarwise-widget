@@ -28,13 +28,11 @@ public class SugarWiseUtils {
 	private static Wisdom wisdom = null;
 	
 	private Context context;
-	private String language;
 	private String theme;
 	private int color;
 	
-	public SugarWiseUtils( Context context, String language, String theme, int color) {
+	public SugarWiseUtils( Context context, String theme, int color) {
 		this.context = context;
-		this.language = language;
 		this.theme = theme;
 		this.color = color;
 		getNewWisdomCrystal();

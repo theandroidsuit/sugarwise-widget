@@ -29,8 +29,7 @@ public class SugarWiseConfigure extends Activity implements OnItemSelectedListen
     private static final String PREF_PREFIX_KEY = "prefix_";
 
 	private int widgetID;
-	
-	private String chosenLanguage;
+
 	private String languageToUse;
 	private int colorToUse;
 	private String themeToUse;
@@ -82,12 +81,10 @@ public class SugarWiseConfigure extends Activity implements OnItemSelectedListen
 
             Log.d(TAG + "theme", themeToUse);
             Log.d(TAG + "color", String.valueOf(colorToUse));
-            Log.d(TAG + "language", languageToUse);
-            
+
             saveTitlePref(context, widgetID, "theme", themeToUse);
             saveTitlePref(context, widgetID, "color", colorToUse);
-            saveTitlePref(context, widgetID, "language", languageToUse);
-            
+
     		AppWidgetManager manager = AppWidgetManager.getInstance(context);
     		SugarWiseWidgetProvider.getNewWisdomCrystal(context, manager, widgetID);
 
@@ -145,11 +142,9 @@ public class SugarWiseConfigure extends Activity implements OnItemSelectedListen
 
 	
 	private void registerSpinnerListener() {
-		Spinner language = (Spinner) findViewById(R.id.languageSpinner);
 		Spinner color = (Spinner) findViewById(R.id.colorSpinner);
 		Spinner theme = (Spinner) findViewById(R.id.themeSpinner);
 		
-		language.setOnItemSelectedListener(this);
 		color.setOnItemSelectedListener(this);
 		theme.setOnItemSelectedListener(this);
 		
@@ -161,9 +156,6 @@ public class SugarWiseConfigure extends Activity implements OnItemSelectedListen
 		int spinnerId = parent.getId();
 		
 		switch(spinnerId){
-			case R.id.languageSpinner:
-				setupLanguage((String) parent.getItemAtPosition(position));
-				break;
 			case R.id.themeSpinner:
 				setupTheme((String) parent.getItemAtPosition(position));
 				break;
@@ -211,16 +203,14 @@ public class SugarWiseConfigure extends Activity implements OnItemSelectedListen
 				colorToUse = Color.parseColor("#000000");
 				break;
 		};
-	}
+        Log.d(TAG + ".color", String.valueOf(colorToUse));
 
-	private void setupLanguage(String item) {
-		chosenLanguage = item;		
-		languageToUse = chosenLanguage;
-	}
-	
+    }
+
+
 	private void setupTheme(String item) {
 		
 		themeToUse = item.toLowerCase().replace(" ", "").trim();
-		Log.d(TAG + ".theme!", themeToUse);
+		Log.d(TAG + ".theme", themeToUse);
 	}
 }
