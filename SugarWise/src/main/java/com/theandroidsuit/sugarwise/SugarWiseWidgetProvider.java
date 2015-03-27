@@ -101,8 +101,8 @@ public class SugarWiseWidgetProvider extends AppWidgetProvider{
 		theme = SugarWiseConfigure.loadTitlePref(context, widgetID, "theme");
 		color = SugarWiseConfigure.loadTitlePrefInt(context, widgetID, "color");
 		
-        Log.d(TAG + "theme", theme);
-        Log.d(TAG + "color", String.valueOf(color));
+        //Log.d(TAG + "theme", theme);
+        //Log.d(TAG + "color", String.valueOf(color));
 	}
 	
 	public static void setNewWisdomSugar(Context context, int widgetID, String theme, int color, RemoteViews remoteViews) {
@@ -116,9 +116,9 @@ public class SugarWiseWidgetProvider extends AppWidgetProvider{
 		String desc = wisdom.getWisdomSentence();
 		String author = wisdom.getWisdomAuthor();
 		
-		Log.d(TAG + ".title", title);
-		Log.d(TAG + ".desc", desc);
-		Log.d(TAG + ".author", author);
+		//Log.d(TAG + ".title", title);
+		//Log.d(TAG + ".desc", desc);
+		//Log.d(TAG + ".author", author);
 		
 		remoteViews.setTextViewText(R.id.title,title);
 		remoteViews.setTextViewText(R.id.desc, desc);
@@ -132,7 +132,6 @@ public class SugarWiseWidgetProvider extends AppWidgetProvider{
 	
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		// TODO Auto-generated method stub
 		super.onReceive(context, intent);
 		
 		Log.d(TAG, "onReceive");
